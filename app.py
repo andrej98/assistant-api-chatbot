@@ -103,9 +103,9 @@ def main():
                                 cited_file = st.session_state.client.files.retrieve(
                                     file_citation.file_id
                                 )
-                                citations.append(
-                                    f"[{index}] {file_citation.quote} from {cited_file.filename}"
-                                )
+                                # citations.append(
+                                #     f"[{index}] {file_citation.quote} from {cited_file.filename}"
+                                # )
                             elif file_path := getattr(annotation, "file_path", None):
                                 cited_file = st.session_state.client.files.retrieve(
                                     file_path.file_id
